@@ -1,0 +1,29 @@
+<div>
+    <h2>Attribute directives</h2>
+    <div>
+        <p>syntax:"element [ngClass]="expression">.../element>"</p>
+        <p>example</p>
+        <div class="attributedirective">
+<h3>NgClass with a String</h3>
+<div [ngClass]="'red size20'"> Text with Size 20px </div>
+        </div>
+        <h3>NgClass with Array</h3>
+        <div [ngClass]="['red','size20']">class with array </div>
+        <h3>NgClass with Object</h3>
+        <div class="row">     
+            <div [ngClass]="{'red':true,'size20':true}">Text with Size 20px</div>
+          </div>
+      <h3>Dynamically updating Class names</h3>
+      <div class="row">     
+        <div [ngClass]="cssStringVar">Text with Size 20px : from component     </div> 
+        <div [ngClass]="cssArray">
+           Text with Size 20px  : from CSS Array
+          </div>
+     </div>
+     <div>
+        <h3>ngStyle</h3>
+        <p [ngStyle]="{'background': isBlue ? 'blue' : 'red'}">Attribute Directive</p>
+  
+     </div>
+      </div>
+</div>

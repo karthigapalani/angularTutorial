@@ -1,0 +1,78 @@
+<nav id="sidebar" >
+    <div class="dashboard" style="text-align: center;">
+        <h6 class="mt-3">DASHBOARD</h6>
+    </div>
+    <ul class="list-unstyled mt-4">
+        <li>
+            <a (click)="toggleMaster()">
+                <i class="fa fa-angle-double-right"></i>
+              <span routerLink="/dataBinding">Data Binding</span>
+              <i class="fa fa-angle-right angle"></i>
+            </a>
+            <ul class="treeview-menu1 list-unstyled" *ngIf="toggleMasterInfo">
+                <li>
+                    
+                  <a routerLink="/oneway-databinding" style="margin-top: 0;"> 
+                  one way data binding
+                  </a>
+                </li>
+                <li>
+                    
+                  <a routerLink ="/twoway-databinding" style="margin-top: 0;">
+                   Two way data binding
+                  </a>
+             
+            </ul>
+        </li>
+        <li>
+            <a (click)="toggleTransaction()">
+              <i class="fa fa-exchange"></i>
+              <span >Pipes</span>
+              <i class="fa fa-angle-right angle"></i>
+            </a>
+            <ul class="treeview-menu1 list-unstyled" *ngIf="toggleTransactionInfo">
+                <li>
+                  <a routerLink="/Pipes" style="margin-top: 0;">     
+                    built in Pipes
+                  </a>
+                </li>
+               
+                <li>
+                  <a routerLink="/CustomPipe" style="margin-top: 0;">
+                custom pipes
+                   
+                  </a>
+                </li>
+              
+            </ul>
+        </li>
+        <li>
+            <a (click)="toggleReports()">
+                <i class="fa fa-angle-double-right"></i>
+              <span>directives</span>
+              <i class="fa fa-angle-right angle"></i>
+            </a>
+        </li>
+        <ul class="treeview-menu1 list-unstyled" *ngIf="toggleReportsInfo">
+            <li>
+              <a routerLink="/BuildInDirective"  style="margin-top: 0;">
+                <i class="fa fa-angle-double-right"></i>
+              built-in directives
+              </a>
+            </li>
+          
+            <li>
+                <a  routerLink="/AttributeDirective"style="margin-top: 0;">
+                  <i class="fa fa-angle-double-right"></i>
+                Attribute directives
+                </a>
+              </li>
+              <li>
+                <a routerLink="/StructuralDirective" style="margin-top: 0;">
+                  <i class="fa fa-angle-double-right"></i>
+               structural directives
+                </a>
+              </li>
+        </ul>
+    </ul>
+</nav>

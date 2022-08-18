@@ -1,0 +1,33 @@
+<div>
+  <div class="ngfor">
+    <h2>
+        *ngFor :
+    </h2>
+    <div *ngFor="let item of items">
+        <p >  {{item}} </p>
+       </div>
+  </div>
+  <div class="ngforwithindexs">
+    <h2>ngFor with Indexes</h2>
+    <div *ngFor="let item of items;let i=index">
+        <p >  {{item}} {{i}} </p>
+       </div>
+  </div>
+  <div class="ngif">
+    <h2> *ngIf:</h2>
+    <p>Demo::<button (click)="ondisplay()">ngif</button></p>
+    <div *ngIf="display">
+        This text will be hidden
+      </div>
+
+  </div>
+  <div class="ngswitch">
+    <h2> *ngswitch:</h2>
+    <p>demo::</p>
+    <div [ngSwitch]="'one'">
+        <div *ngSwitchCase="'one'">case 1 displayed</div>  
+        <div *ngSwitchCase="'two'">case2 displayed</div>  
+        <div *ngSwitchDefault>Default Option is Displayed</div>  
+      </div>
+  </div>
+</div>

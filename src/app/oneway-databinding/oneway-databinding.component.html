@@ -1,0 +1,100 @@
+<div>
+    <h2>oneway-databinding:</h2>
+    <p>In one way binding data flows from one direction. Either from view to component or from component to view.</p>
+    
+</div>
+<div>
+    <ul>
+        <h2>Component to View:</h2>
+        <p>It will bind the data from Component to View using the following different ways</p>
+        <li><button (click)="oninterpolation()">Interpolation Binding</button>
+            <div *ngIf="interpolation">
+                <p>syntax:(double curly braces) in the template to denote the interpolation</p>
+                <!-- Interpolation -->
+                <p>example:in html</p>
+
+                <img src="/assets/interpolation.PNG" alt="image">
+                <p>in component.ts</p>
+                <img src="/assets/interpolationts.PNG" alt="image">
+                <br>
+                <p>demo::
+                    {{Interpolation}} 
+                </p>
+               
+                <!-- Interpolation -->
+            </div>
+           
+          
+        </li>
+        <!-- Property Binding -->
+        <li><button (click)="onPropertyBinding()">Property Binding</button>
+        <div *ngIf="PropertyBinding">
+            <p>
+                The Property Binding uses the following Syntax:
+    [binding-target]=”binding-source”
+            </p>
+            <p>in html</p>
+            <img src="/assets/property.PNG" alt="image">
+            <p>in ts</p>
+            <img src="/assets/propertyts.PNG" alt="image">
+            <!-- Property Binding -->
+            <p>DEmo:</p>
+        <div>
+            <h1 [innerText]="title"></h1>
+    <button [disabled]="isDisabled">I am disabled</button>
+          </div>  
+     <!-- Property Binding -->
+        </div>
+          
+    </li> 
+        <li> <button>Attribute Binding</button></li>
+        <li><button routerLink="/oneway-databinding">Class Binding</button>
+            <!-- Class Binding  -->
+            <div class="class-binding">
+<!-- example for  class binding  -->
+ <div class="classbind" [className]="'size20'">Class</div>
+</div>
+ <!-- Class Binding  -->
+</li>
+            
+          
+             <!-- Class Binding  -->
+        <li><button routerLink="/oneway-databinding">Style Binding</button>
+        <!-- style binding -->
+        <div class="style binding ">
+            <p>
+                The syntax of the style binding is similar to the property binding.
+    [style.style-property] = "style-value"
+            </p>
+            <p>
+                example:
+            </p>
+          <!-- example for style binding -->
+            <p [style.color]="'red'">change text color</p>
+              <!-- example for style binding -->
+        </div>
+      
+         <!-- style binding -->
+    </li>
+     </ul>
+     <ul>
+        <h2>View to Component</h2>
+        <p>Event binding flows or binds the data from an HTML element to a componen</p>
+        <li>
+           <button>Event Binding</button>
+            <div class="event-binding">
+                <p>
+                    syntax for event binding:"(target-event)="TemplateStatement""
+                   
+                </p>
+                <h2>Demo</h2>
+                 <!-- example -->
+                 <button  (click)="clickMe()">event binding</button>
+                 <!-- example -->
+                 <p>You have clicked {{clickCount}}</p>
+            </div>
+          
+        </li>
+     </ul>
+</div>
+
